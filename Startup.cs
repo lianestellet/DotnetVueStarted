@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace DotnetVue
 {
@@ -41,6 +42,10 @@ namespace DotnetVue
             {
                 app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true
+                });
             }
             else
             {
@@ -57,6 +62,9 @@ namespace DotnetVue
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" }); 
+
             });
         }
     }
