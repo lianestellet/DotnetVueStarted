@@ -66,10 +66,13 @@ app.UseMvc(routes =>
 _NOTE: "The main webpack role on this example, is to bundle the vue and js files into a compatible js file. Take a look at entry and output files."_
 
 *steps 3 and 4 could be done easier using the commands:
-1- npm init 
-2- webpack init
-or if you have vue-client installed globally (npm i vue-cli -g) by:
-vue init webpack-simple VueApp
+
+1- *npm init* 
+
+2- *webpack init*
+
+or if you have vue-client installed (*npm i vue-cli -g*):
+*vue init webpack-simple VueApp*
 
 Each way it's a good thing to understand how it's done gradually. Credits for David Katz that created an awesome Vue.js course at udemy.
 
