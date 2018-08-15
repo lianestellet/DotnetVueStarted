@@ -17,7 +17,7 @@ instructions:
 
  Changes in project to make it work:
 
-1- At your Startup.cs file, use this middleware to run webpack at dotnet run.
+1- At your *Startup.cs* file, use this middleware to run webpack at dotnet run.
 
  ```
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -36,7 +36,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
 }
  ```
 
-also add this SPA route:
+*also add this SPA route:*
 ```
 app.UseMvc(routes =>
 {
@@ -51,7 +51,7 @@ app.UseMvc(routes =>
 
 
 
-2- create .babelrc on root using this piece of code for transpilling es6 files:
+2- create *.babelrc* on root using this piece of code for transpilling es6 files:
 
 ```
 {
@@ -59,9 +59,9 @@ app.UseMvc(routes =>
 }
 ```
 
-3- Add the package.json file to manage dependencies
+3- Add the *package.json* file to manage dependencies
 
-4- Add webpack.config.js file to bundle the Vue application and generate a single file that will be loaded on the application page
+4- Add *webpack.config.js* file to bundle the Vue application and generate a single file that will be loaded on the application page
 
 _NOTE: "The main webpack role on this example, is to bundle the vue and js files into a compatible js file. Take a look at entry and output files."_
 
