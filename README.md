@@ -72,6 +72,7 @@ _NOTE: "The main webpack role on this example, is to bundle the vue and js files
 2- *webpack init*
 
 or if you have vue-client installed (*npm i vue-cli -g*):
+
 *vue init webpack-simple VueApp*
 
 Each way it's a good thing to understand how it's done gradually. Credits for David Katz that created an awesome Vue.js course at udemy.
