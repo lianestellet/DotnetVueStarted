@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/DotnetVue/obj
+/DotnetVue/DotnetVue.csproj.user
+/DotnetVue.sln
+/DotnetVue/bin/Debug/netcoreapp2.1
